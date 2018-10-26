@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/previousText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="550dp"
+            android:gravity="center"
+            android:text="Previous Places"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="@+id/adv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.071" />
+
+        <SearchView
+            android:id="@+id/foodSearch"
+            android:layout_width="256dp"
+            android:layout_height="46dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="240dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="340dp"
+            android:background="@drawable/roundedbutton"
+            android:queryHint="Find your food"
+            app:layout_constraintBottom_toBottomOf="@+id/adv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.561"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.771" />
+
+
+        <HorizontalScrollView
+            android:id="@+id/previous"
+            android:layout_width="413dp"
+            android:layout_height="230dp"
+            android:layout_below="@+id/previousText"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="@+id/adv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.14">
+
+            <LinearLayout
+                android:id="@+id/previousPlaces"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+
+        </HorizontalScrollView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/adv"
+            android:layout_width="418dp"
+            android:layout_height="36dp"
+            android:layout_alignBottom="@+id/textView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="500dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.954" />
+
+        <ImageButton
+            android:id="@+id/Food"
+            android:layout_width="130dp"
+            android:layout_height="140dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/roundedbutton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.875"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.764" />
+
+        <ImageButton
+            android:id="@+id/Chill"
+            android:layout_width="130dp"
+            android:layout_height="140dp"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/roundedbutton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.143"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.766" />
+
+        <Button
+            android:id="@+id/FoodText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/roundedbutton"
+            android:text="FOOD"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.827"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.923" />
+
+        <Button
+            android:id="@+id/ChillText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/roundedbutton"
+            android:text="Chill"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.205"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.925" />
+
+        <ImageView
+            android:id="@+id/OwlImage"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="131dp"
+            android:layout_height="176dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="390dp"
+            android:background="@mipmap/owl1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.26" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="320dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="300dp"
+            android:gravity="center"
+            android:text="Categories"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.906" />
+    </android.support.constraint.ConstraintLayout>
+</RelativeLayout>
