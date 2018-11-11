@@ -3,11 +3,11 @@ package edu.shahisjsu.sagar.randomme;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class PopUpActivity extends AppCompatActivity {
+public class PopFilter extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pop_up);
+        setContentView(R.layout.activity_pop_filter);
     }
 }
